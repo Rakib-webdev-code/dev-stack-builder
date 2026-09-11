@@ -2,14 +2,17 @@ import type { Technology } from "../Types/type";
 
 export interface TechnologyCardProps {
   technology: Technology;
+  isAdded: boolean;
+  onAdd: (technology: Technology) => void;
 }
 
 export default function TechnologyCard({
   technology,
+  isAdded,
+  onAdd,
 }: TechnologyCardProps) {
   return (
     <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-
       <div className="flex items-center justify-between gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
           <img
@@ -50,9 +53,15 @@ export default function TechnologyCard({
 
       <button
         type="button"
-        className="mt-4 w-full rounded-full bg-linear-to-r from-[#ff5722] via-[#d81b7e] to-[#5b21b6] px-4 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:from-[#e64a19] hover:via-[#b71569] hover:to-[#4c1d95] hover:shadow-lg"
+        disabled={isAdded}
+        onClick={() => onAdd(technology)}
+        className={`mt-4 w-full rounded-full px-4 py-3 text-sm font-bold shadow-sm transition-all duration-300 ${
+          isAdded
+            ? "cursor-not-allowed bg-slate-200 text-slate-500"
+            : "bg-linear-to-r from-[#ff5722] via-[#d81b7e] to-[#5b21b6] text-white hover:-translate-y-0.5 hover:from-[#e64a19] hover:via-[#b71569] hover:to-[#4c1d95] hover:shadow-lg"
+        }`}
       >
-        Add to Stack
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
