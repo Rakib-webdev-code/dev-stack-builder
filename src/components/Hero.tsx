@@ -8,7 +8,7 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <h1 className="mx-auto max-w-2xl text-4xl font-black leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:mx-0 lg:text-6xl">
               Build Your Ideal
-              <span className="mt-2 block bg-linear-to-r from-[#ff5722] via-[#d81b7e] to-[#5b21b6] bg-clip-text text-transparent">
+              <span className="mt-2 block brand-gradient bg-clip-text text-transparent">
                 Development Stack
               </span>
             </h1>
@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <button
                 type="button"
-                className="w-full rounded-full bg-linear-to-r from-[#ff5722] via-[#d81b7e] to-[#5b21b6] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
+                className="w-full rounded-full brand-gradient px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
               >
                 Explore Technologies
               </button>

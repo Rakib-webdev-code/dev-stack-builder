@@ -83,8 +83,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="rounded-full bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 px-3 py-2 text-xs font-bold text-white shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:px-4 sm:text-sm"
-          >
+           className="rounded-full brand-gradient px-3 py-2 text-xs font-bold text-white shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:px-4 sm:text-sm">
             Sign Up
           </button>
         </div>

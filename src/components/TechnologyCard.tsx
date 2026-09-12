@@ -62,7 +62,7 @@ export default function TechnologyCard({
         className={`mt-4 w-full rounded-full px-4 py-3 text-sm font-bold shadow-sm transition-all duration-300 ${
           isAdded
             ? "cursor-not-allowed bg-slate-200 text-slate-500"
-            : "bg-linear-to-r from-[#ff5722] via-[#d81b7e] to-[#5b21b6] text-white hover:-translate-y-0.5 hover:from-[#e64a19] hover:via-[#b71569] hover:to-[#4c1d95] hover:shadow-lg"
+            : "brand-gradient text-white hover:-translate-y-0.5 hover:shadow-lg"
         }`}
       >
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}

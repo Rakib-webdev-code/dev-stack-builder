@@ -1,2 +1,17 @@
  @import "tailwindcss";
 
+
+:root {
+  --color-brand-orange: #f97316;
+  --color-brand-pink: #ec4899;
+  --color-brand-violet: #8b5cf6;
+}
+
+.brand-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-brand-orange),
+    var(--color-brand-pink),
+    var(--color-brand-violet)
+  );
+}

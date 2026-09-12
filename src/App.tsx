@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -60,13 +60,15 @@ function App() {
 
       <Hero />
 
-      <Technologies
+      <Suspense fallback = {<h2>Loading...</h2>}>
+          <Technologies
         promise={technologiesPromise}
         stack={stack}
         onAdd={handleAddToStack}
         onRemove={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+      </Suspense>
 
       <Footer />
 
