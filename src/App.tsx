@@ -60,7 +60,7 @@ function App() {
 
       <Hero />
 
-      <Suspense fallback = {<h2>Loading...</h2>}>
+      <Suspense fallback={<h2>Loading...</h2>}>
           <Technologies
         promise={technologiesPromise}
         stack={stack}
