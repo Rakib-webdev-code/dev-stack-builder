@@ -1,3 +1,4 @@
+import { FiStar } from "react-icons/fi";
 import type { Technology } from "../Types/type";
 
 export interface TechnologyCardProps {
@@ -13,12 +14,10 @@ export default function TechnologyCard({
 }: TechnologyCardProps) {
   return (
     <div
-    className={`flex h-full flex-col rounded-2xl border p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
-      isAdded
-        ? "border-[#d81b7e] bg-pink-50/30"
-        : "border-slate-200 bg-white"
-    }`}
-  >
+      className={`flex h-full flex-col rounded-2xl border p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+        isAdded ? "border-[#d81b7e] bg-pink-50/30" : "border-slate-200 bg-white"
+      }`}
+    >
       <div className="flex items-center justify-between gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
           <img
@@ -34,9 +33,7 @@ export default function TechnologyCard({
       </div>
 
       <div className="mt-5 flex-1">
-        <h3 className="text-xl font-bold text-slate-950">
-          {technology.name}
-        </h3>
+        <h3 className="text-xl font-bold text-slate-950">{technology.name}</h3>
 
         <p className="mt-3 text-sm leading-6 text-slate-500">
           {technology.description}
@@ -52,8 +49,9 @@ export default function TechnologyCard({
           {technology.difficulty}
         </span>
 
-        <span className="whitespace-nowrap text-sm font-bold text-slate-700">
-          ⭐ {technology.rating}
+        <span className="flex items-center gap-1 whitespace-nowrap text-sm font-bold text-slate-700">
+          <FiStar className="text-amber-500" />
+          {technology.rating}
         </span>
       </div>
 

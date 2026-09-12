@@ -1,3 +1,4 @@
+import { FiX } from "react-icons/fi";
 import type { Technology } from "../Types/type";
 
 interface StackSidebarProps {
@@ -70,7 +71,7 @@ export default function StackSidebar({
                 aria-label={`Remove ${technology.name}`}
                 className="flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold text-slate-400 transition-colors hover:bg-red-50 hover:text-red-500"
               >
-                ✕
+                <FiX className="text-base" />
               </button>
             </div>
           ))}

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
+import Footer from "./components/Footer";
 import type { Technology } from "./Types/type";
 
 const fetchTechnologies = async (): Promise<Technology[]> => {
@@ -56,6 +57,7 @@ function App() {
   return (
     <>
       <Navbar />
+
       <Hero />
 
       <Technologies
@@ -65,6 +67,8 @@ function App() {
         onRemove={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+
+      <Footer />
 
       <ToastContainer position="top-right" autoClose={2000} />
     </>
